@@ -1,3 +1,4 @@
+require 'sidekiq'
 require 'mixpanel-ruby'
 require 'mixpanel-sidekiq-config'
 
