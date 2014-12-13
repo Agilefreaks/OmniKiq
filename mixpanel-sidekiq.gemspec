@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    =
     'http://rubygems.org/gems/mixpanel-sidekiq'
   s.license       = 'MIT'
-  s.add_development_dependency 'mixpanel-ruby'
-  s.add_development_dependency 'sidekiq'
+
+  s.add_dependency 'mixpanel-ruby'
+  s.add_dependency 'sidekiq'
 end
