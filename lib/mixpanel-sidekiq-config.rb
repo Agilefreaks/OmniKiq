@@ -1,4 +1,3 @@
-require 'extensions/array'
 require 'extensions/module'
 
 module MixpanelSidekiqConfig

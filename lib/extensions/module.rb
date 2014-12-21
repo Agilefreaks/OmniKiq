@@ -1,6 +1,6 @@
 class Module
   def mattr_reader(*syms)
-    options = syms.extract_options!
+    options = extract_options!(syms)
     syms.each do |sym|
       class_eval(<<-EOS, __FILE__, __LINE__ + 1)
         @@#{sym} = nil unless defined? @@#{sym}
@@ -20,7 +20,7 @@ class Module
   end
 
   def mattr_writer(*syms)
-    options = syms.extract_options!
+    options = extract_options!(syms)
     syms.each do |sym|
       class_eval(<<-EOS, __FILE__, __LINE__ + 1)
         def self.#{sym}=(obj)
@@ -41,5 +41,15 @@ class Module
   def mattr_accessor(*syms)
     mattr_reader(*syms)
     mattr_writer(*syms)
+  end
+
+  private
+
+  def extract_options!(array)
+    if array.last.is_a?(Hash) && array.last.extractable_options?
+      array.pop
+    else
+      {}
+    end
   end
 end
