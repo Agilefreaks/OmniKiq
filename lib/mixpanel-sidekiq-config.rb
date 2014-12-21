@@ -1,7 +1,4 @@
-if (!Module.respond_to?('mattr_accessor'))
-  require 'extensions/module'
-end
-
+require 'extensions/module'
 
 module MixpanelSidekiqConfig
   mattr_accessor :mixpanel_api_key
