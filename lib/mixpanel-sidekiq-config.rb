@@ -73,7 +73,6 @@ module MixpanelSidekiqConfig
   mattr_accessor :redis_namespace
   self.redis_namespace = 'default'
 
-
   mattr_accessor :test_mode
   self.test_mode = false
 
