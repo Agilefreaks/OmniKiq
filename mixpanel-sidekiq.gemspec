@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'mixpanel-sidekiq'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.date        = '2014-12-12'
   s.summary     = "Integrate mixpanel and sidekiq in your ruby app"
   s.description = "A gem used to defer posts to mixpanel in a background worker."
