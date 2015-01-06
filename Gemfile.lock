@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mixpanel-sidekiq (0.0.1)
+    mixpanel-sidekiq (0.0.2)
       mixpanel-ruby
       sidekiq
 
