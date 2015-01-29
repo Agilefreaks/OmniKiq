@@ -10,5 +10,5 @@ MixpanelSidekiqConfig.config do |config|
   config.mixpanel_api_key = 'd4a302f695330322fe4c44bc302f3780'
 end
 
-require 'mixpanel-sidekiq.rb'
+require 'omnikiq.rb'
 
