@@ -7,6 +7,5 @@ describe OmniKiq::Configuration do
     its(:mixpanel_api_key) { is_expected.to eq '' }
     its(:redis_url) { is_expected.to eq 'redis://localhost:6379' }
     its(:redis_namespace) { 'default' }
-    its(:test_mode) { false }
   end
 end
