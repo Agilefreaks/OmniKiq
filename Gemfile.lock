@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mixpanel-sidekiq (0.0.4)
+    omnikiq (0.0.1)
       mixpanel-ruby
       sidekiq
 
@@ -39,6 +39,6 @@ PLATFORMS
 
 DEPENDENCIES
   mixpanel-ruby
-  mixpanel-sidekiq!
+  omnikiq!
   sidekiq
   sinatra

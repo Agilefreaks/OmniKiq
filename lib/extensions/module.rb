@@ -1,4 +1,4 @@
-if (!Module.respond_to?('mattr_accessor'))
+if !Module.respond_to?('mattr_accessor')
   class Module
     def mattr_reader(*syms)
       options = extract_options!(syms)
