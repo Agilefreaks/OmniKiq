@@ -13,8 +13,8 @@ module OmniKiq
 
   def self.configuration
     @configuration ||= begin
-                         config = OmniKiq::Configuration.new
-                         config
+                        config = OmniKiq::Configuration.new
+                        config
                       end
   end
 

@@ -1,6 +1,5 @@
 module OmniKiq
   class Configuration
-
     # Module that holds `attr_reader` declarations. It's in a separate
     # module to allow us to override those methods and use `super`.
     # @private
@@ -30,7 +29,7 @@ module OmniKiq
     #
     # Invoked by the `add_setting` instance method. Use that method on a
     # `Configuration` instance rather than this class method.
-    def self.add_setting(name, opts={})
+    def self.add_setting(name, opts = {})
       attr_writer name
       add_read_only_setting name
       Array(opts[:alias_with]).each do |alias_name|
@@ -40,7 +39,7 @@ module OmniKiq
     # @private
     #
     # As `add_setting` but only add the reader.
-    def self.add_read_only_setting(name, _opts={})
+    def self.add_read_only_setting(name, _opts = {})
       define_reader name
       define_predicate_for name
     end

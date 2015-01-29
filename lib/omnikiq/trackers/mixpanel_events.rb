@@ -7,7 +7,7 @@ module OmniKiq
       include Sidekiq::Worker
 
       def perform(email, event_name, params)
-        Mixpanel::Tracker.new(OmniKiq.mixpanel_api_key).track(email, event_name, params, ip=0)
+        Mixpanel::Tracker.new(OmniKiq.mixpanel_api_key).track(email, event_name, params)
       end
     end
   end
