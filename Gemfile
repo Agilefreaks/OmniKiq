@@ -13,6 +13,7 @@ group :test do
 end
 
 group :development do
+  gem 'rspec-its'
   gem 'rubocop'
   gem 'simplecov'
   gem 'simplecov-teamcity-summary'

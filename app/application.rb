@@ -1,6 +1,5 @@
 require 'sidekiq'
 require 'mixpanel-ruby'
-require 'mixpanel-sidekiq-config.rb'
 
 Sidekiq.configure_server do |config|
   config.redis = { :namespace => 'Omnipaste', :size => 10 }
