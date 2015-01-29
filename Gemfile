@@ -5,3 +5,4 @@ ruby '2.1.5'
 
 gem 'mixpanel-ruby'
 gem 'sidekiq'
+gem 'sinatra'

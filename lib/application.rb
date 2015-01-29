@@ -11,3 +11,4 @@ MixpanelSidekiqConfig.config do |config|
 end
 
 require 'mixpanel-sidekiq.rb'
+

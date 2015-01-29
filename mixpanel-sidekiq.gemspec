@@ -6,7 +6,12 @@ Gem::Specification.new do |s|
   s.description = "A gem used to defer posts to mixpanel in a background worker."
   s.authors     = ["Adrian Nistor"]
   s.email       = 'levelboy@gmail.com'
-  s.files       = ['lib/extensions/module.rb','lib/mixpanel-sidekiq-config.rb', 'lib/mixpanel-sidekiq.rb', 'lib/mixpanel_events_tracker.rb', 'lib/mixpanel_people_tracker.rb']
+  s.files       = %w(lib/extensions/module.rb
+                     lib/mixpanel-sidekiq-config.rb
+                     lib/mixpanel-sidekiq.rb
+                     lib/trackers/mixpanel_events_tracker.rb
+                     lib/trackers/mixpanel_alias_tracker.rb
+                     lib/trackers/mixpanel_people_tracker.rb)
   s.homepage    =
     'http://rubygems.org/gems/mixpanel-sidekiq'
   s.license       = 'MIT'

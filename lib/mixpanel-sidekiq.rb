@@ -1,7 +1,7 @@
 require 'mixpanel-sidekiq-config'
-require 'mixpanel_events_tracker'
-require 'mixpanel_people_tracker'
-require 'mixpanel_alias_tracker'
+require 'trackers/mixpanel_events_tracker'
+require 'trackers/mixpanel_people_tracker'
+require 'trackers/mixpanel_alias_tracker'
 
 module MixpanelSidekiq
   extend MixpanelSidekiqConfig
