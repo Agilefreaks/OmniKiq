@@ -2,15 +2,17 @@ require 'sidekiq'
 require 'mixpanel-ruby'
 
 require 'omnikiq/configuration'
-
 require 'omnikiq/trackers/base'
-require 'omnikiq/trackers/mixpanel_alias'
-require 'omnikiq/trackers/mixpanel_events'
-require 'omnikiq/trackers/mixpanel_people'
 
 module OmniKiq
   class << self
     attr_writer :configuration
+  end
+
+  module Trackers
+    autoload :MixpanelAlias, 'omnikiq/trackers/mixpanel_alias'
+    autoload :MixpanelEvents, 'omnikiq/trackers/mixpanel_events'
+    autoload :MixpanelPeople, 'omnikiq/trackers/mixpanel_people'
   end
 
   def self.configuration

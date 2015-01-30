@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/Agilefreaks/OmniKiq'
   s.license     = '© 2015 Omnipaste'
 
-  s.files = `git ls-files`.split("\n")
+  s.files = `git ls-files -- lib/*`.split("\n")
   s.test_files = `git ls-files -- spec/*`.split("\n")
   s.require_paths = ['lib']
   s.required_ruby_version = '>= 2.1.5'
