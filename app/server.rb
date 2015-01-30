@@ -14,7 +14,7 @@ redis_url = if ENV[:rack_env] == 'staging' || ENV[:rack_env] == 'production'
 Sidekiq.configure_server do |config|
   config.redis = {
     url: redis_url,
-    namespace: 'default'
+    namespace: ENV[:rack_env]
   }
 
   config.options[:concurrency] = 10
