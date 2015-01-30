@@ -52,7 +52,7 @@ module OmniKiq
     def initialize
       @mixpanel_api_key = ''
       @redis_url = 'redis://localhost:6379'
-      @redis_namespace = 'default'
+      @redis_namespace = ENV['RACK_ENV'] || 'default'
       @test_mode = false
     end
   end
