@@ -9,6 +9,7 @@ require 'rspec/its'
 Dir[File.expand_path(File.join('../support/**/*.rb'), __FILE__)].each { |f| require f }
 
 require 'simplecov'
+require 'simplecov-teamcity-summary'
 SimpleCov.start do
   at_exit do
     SimpleCov::Formatter::TeamcitySummaryFormatter.new.format(SimpleCov.result) if ENV['TEAMCITY_VERSION']
