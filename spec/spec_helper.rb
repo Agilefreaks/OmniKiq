@@ -1,5 +1,4 @@
-require 'bundler/setup'
-Bundler.setup
+require 'rubygems'
 
 ENV['RACK_ENV'] ||= 'test'
 
