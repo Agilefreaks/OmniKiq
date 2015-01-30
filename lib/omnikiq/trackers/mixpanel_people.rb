@@ -3,11 +3,9 @@ require 'mixpanel-ruby'
 
 module OmniKiq
   module Trackers
-    class MixpanelPeople
-      include Sidekiq::Worker
-
+    class MixpanelPeople < Base
       def perform(distinct_id, params, ip = 0)
-        Mixpanel::Tracker.new(OmniKiq.mixpanel_api_key).people.set(distinct_id, params, ip)
+        mixpanel_tracker.people.set(distinct_id, params, ip)
       end
     end
   end

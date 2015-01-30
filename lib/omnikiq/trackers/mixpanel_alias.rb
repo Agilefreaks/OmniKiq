@@ -1,13 +1,8 @@
-require 'sidekiq'
-require 'mixpanel-ruby'
-
 module OmniKiq
   module Trackers
-    class MixpanelAlias
-      include Sidekiq::Worker
-
+    class MixpanelAlias < Base
       def perform(email, distinct_id)
-        Mixpanel::Tracker.new(OmniKiq.mixpanel_api_key).alias(email, distinct_id)
+        mixpanel_tracker.alias(email, distinct_id)
       end
     end
   end

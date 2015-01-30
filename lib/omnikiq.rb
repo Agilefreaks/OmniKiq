@@ -1,7 +1,9 @@
+require 'sidekiq'
 require 'mixpanel-ruby'
 
 require 'omnikiq/configuration'
 
+require 'omnikiq/trackers/base'
 require 'omnikiq/trackers/mixpanel_alias'
 require 'omnikiq/trackers/mixpanel_events'
 require 'omnikiq/trackers/mixpanel_people'

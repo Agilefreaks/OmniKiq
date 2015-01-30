@@ -3,11 +3,9 @@ require 'mixpanel-ruby'
 
 module OmniKiq
   module Trackers
-    class MixpanelEvents
-      include Sidekiq::Worker
-
-      def perform(email, event_name, params)
-        Mixpanel::Tracker.new(OmniKiq.configuration.mixpanel_api_key).track(email, event_name, params)
+    class MixpanelEvents < Base
+      def perform(email, event_name, params, ip = 0)
+        mixpanel_tracker.track(email, event_name, params, ip)
       end
     end
   end
