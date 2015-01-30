@@ -10,7 +10,6 @@ gem 'sinatra'
 
 gem 'rubocop'
 gem 'simplecov'
-gem 'simplecov-teamcity-summary', require: false
 
 gem 'puma'
 
