@@ -8,10 +8,9 @@ gem 'mixpanel-ruby'
 gem 'sidekiq'
 gem 'sinatra'
 
-gem 'rubocop'
-gem 'simplecov'
-
 gem 'puma'
+
+gem 'rubocop'
 
 group :development do
   gem 'capistrano', '~> 3.3.0'
@@ -19,4 +18,9 @@ group :development do
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm', require: false
   gem 'capistrano3-puma', require: false
+end
+
+group :test do
+  gem 'simplecov'
+  gem 'simplecov-teamcity-summary'
 end

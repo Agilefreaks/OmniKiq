@@ -121,5 +121,5 @@ DEPENDENCIES
   rubocop
   sidekiq
   simplecov
-  simplecov-teamcity-summary (~> 0)
+  simplecov-teamcity-summary
   sinatra

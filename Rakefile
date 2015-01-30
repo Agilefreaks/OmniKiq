@@ -10,13 +10,6 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 
-require 'rspec/core'
-require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new(:spec) do |spec|
-  # do not run integration tests, doesn't work on TravisCI
-  spec.pattern = FileList['spec/app/*_spec.rb']
-end
-
 if ENV['RACK_ENV'] == 'development' || ENV['RACK_ENV'] == 'test'
   require 'rspec/core'
   require 'rspec/core/rake_task'
