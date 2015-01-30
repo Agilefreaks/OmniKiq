@@ -36,12 +36,16 @@ module OmniKiq
       }
     end
 
-    if OmniKiq.configuration.test_mode
-      require 'sidekiq/testing'
-      Sidekiq::Testing.fake!
-    end
+    enable_testing if OmniKiq.configuration.test_mode
   end
 
   # default config for the client
   configure_client
+
+  private
+
+  def self.enable_testing
+    require 'sidekiq/testing'
+    Sidekiq::Testing.fake!
+  end
 end
