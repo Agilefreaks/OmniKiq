@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'omnikiq'
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.date        = '2014-12-12'
   s.summary     = 'Integrate mixpanel and sidekiq in your ruby app'
   s.description = 'A gem used to defer posts to mixpanel in a background worker.'

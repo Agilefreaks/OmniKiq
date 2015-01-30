@@ -19,5 +19,17 @@ describe OmniKiq do
         c.mixpanel_api_key = 'mixpanel id'
       end
     end
+
+    context 'when test mode is set to true' do
+      before do
+        OmniKiq.configure do |c|
+          c.test_mode = true
+        end
+      end
+
+      it 'will set fake to Sidekiq' do
+        expect(Sidekiq::Testing).to be_fake
+      end
+    end
   end
 end

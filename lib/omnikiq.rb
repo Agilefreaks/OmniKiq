@@ -35,6 +35,11 @@ module OmniKiq
         size: 10
       }
     end
+
+    if OmniKiq.configuration.test_mode
+      require 'sidekiq/testing'
+      Sidekiq::Testing.fake!
+    end
   end
 
   # default config for the client
