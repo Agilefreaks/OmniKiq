@@ -11,3 +11,7 @@ gem 'sinatra'
 gem 'rubocop'
 gem 'simplecov'
 gem 'simplecov-teamcity-summary'
+
+group :test do
+  gem 'webmock'
+end
