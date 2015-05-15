@@ -1,5 +1,6 @@
 require 'sidekiq'
 require 'mixpanel-ruby'
+require 'omni_api'
 
 require 'omnikiq/configuration'
 require 'omnikiq/trackers/base'
@@ -13,6 +14,10 @@ module OmniKiq
     autoload :MixpanelAlias, 'omnikiq/trackers/mixpanel_alias'
     autoload :MixpanelEvents, 'omnikiq/trackers/mixpanel_events'
     autoload :MixpanelPeople, 'omnikiq/trackers/mixpanel_people'
+  end
+
+  module Workers
+    autoload :SendScheduledSmsWorker, 'omnikiq/workers/send_scheduled_sms_worker'
   end
 
   def self.configuration

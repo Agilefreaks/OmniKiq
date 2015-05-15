@@ -23,4 +23,5 @@ end
 group :test do
   gem 'simplecov'
   gem 'simplecov-teamcity-summary'
+  gem 'webmock'
 end
