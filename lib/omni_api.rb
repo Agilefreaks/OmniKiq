@@ -9,10 +9,12 @@ module OmniApi
   self.base_url = ''
 
   mattr_accessor :client_access_token
-  self.client_access_token = ''
-
   def self.client_access_token=(token)
     @client_access_token = "bearer #{token}"
+  end
+
+  def self.client_access_token
+    @client_access_token || 'bearer empty'
   end
 
   def self.config
