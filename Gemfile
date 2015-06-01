@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gemspec
 
-ruby '2.2.0'
+ruby '2.2.1'
 
 gem 'mixpanel-ruby'
 gem 'sidekiq'
