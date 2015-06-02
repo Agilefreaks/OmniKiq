@@ -1,36 +1,19 @@
 require 'singleton'
+require 'active_support/core_ext/module/attribute_accessors'
 
 module OmniApi
-  attr_accessor :test_mode
-  @@test_mode = false
-  @@base_url = ''
-  @@client_access_token = ''
+  mattr_accessor :test_mode
+  self.test_mode = false
 
-  def self.test_mode= value
-    @@test_mode = value
-  end
+  mattr_accessor :base_url
+  self.base_url = ''
 
-  def self.test_mode
-    @@test_mode || false
-  end
+  mattr_accessor :client_access_token
+  self.client_access_token = ''
 
-  # rubocop:disable Style/ClassVars
   def self.client_access_token=(token)
-    @@client_access_token = "bearer #{token}"
+    @client_access_token = "bearer #{token}"
   end
-
-  def self.client_access_token
-    @@client_access_token || ''
-  end
-
-  def self.base_url=(url)
-    @@base_url = url
-  end
-
-  def self.base_url
-    @@base_url || ''
-  end
-
 
   def self.config
     self

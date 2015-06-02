@@ -9,7 +9,9 @@ module OmniKiq
         http = Net::HTTP.new(::OmniApi.config.base_url)
         path = "/api/v1/sms_messages/#{sms_message_id}"
 
-        http.send_request('PATCH', path, {state: 'sending', device_id: device_id}.to_json, {'Authorization' => OmniApi.config.client_access_token})
+        data = { state: 'sending', device_id: device_id }.to_json
+        header = { 'Authorization' => OmniApi.config.client_access_token }
+        http.send_request('PATCH', path, data, header)
       end
     end
   end

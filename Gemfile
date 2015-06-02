@@ -7,6 +7,7 @@ ruby '2.2.1'
 gem 'mixpanel-ruby'
 gem 'sidekiq'
 gem 'sinatra'
+gem 'activesupport'
 
 gem 'puma'
 
