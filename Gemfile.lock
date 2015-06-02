@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omnikiq (0.1.1)
+    omnikiq (0.1.2)
       mixpanel-ruby (~> 1)
       sidekiq (~> 3)
 
